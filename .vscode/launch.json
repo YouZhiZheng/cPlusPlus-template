@@ -1,0 +1,44 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Debug(GDB)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/Debug/ExampleProject", // 可执行文件路径
+            "args": [], // 可选，传递给程序的参数
+            "stopAtEntry": false, // 是否在程序入口处暂停
+            "cwd": "${workspaceFolder}", // 调试器启动的应用程序的工作目录
+            "environment": [], // 可选，设置环境变量
+            "externalConsole": false, // 是否使用外部终端
+            "preLaunchTask": "refactoring", // 启动的任务名称
+            "MIMode": "gdb", // 设置调试器
+            "miDebuggerPath": "/usr/local/bin/gdb", // 调试器的路径
+            "setupCommands": [ // lldb 初始化命令列表
+                {
+                    "description": "启用 pretty-printing",
+                    "text": "enable pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "加载符号表",
+                    "text": "file ${program}",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "显示线程信息",
+                    "text": "set print thread-events on",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "启用调试信息",
+                    "text": "set verbose on",
+                    "ignoreFailures": true
+                }
+            ],
+        }
+    ]
+}

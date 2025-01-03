@@ -1,0 +1,43 @@
+BasedOnStyle: Google                   # 以 Google 的代码风格为基础，许多默认设置会按照 Google 的风格来应用。
+
+AlignAfterOpenBracket: 'AlwaysBreak'   # 在函数参数或构造函数初始化列表的括号后始终换行。
+
+AllowAllConstructorInitializersOnNextLine: 'false'  # 不允许所有构造函数的初始化器都放在下一行。
+
+AllowAllParametersOfDeclarationOnNextLine: 'false'  # 不允许将声明中的所有参数放在下一行。
+
+AlignConsecutiveMacros: 'true'         # 对齐连续的宏定义，使代码更加整齐和易读。
+
+AllowShortCaseLabelsOnASingleLine: 'true'  # 允许在单行中编写短的 case 标签。
+
+AllowShortFunctionsOnASingleLine: 'None'  # 不允许短函数在单行上编写，无论多短都需要换行。
+
+AllowShortIfStatementsOnASingleLine: 'Never' # 不允许 if 语句在单行上编写，即使很短也需要换行。
+
+AllowShortLoopsOnASingleLine: 'false'  # 不允许短循环语句在单行上编写，保持代码一致的换行风格。
+
+BreakBeforeBraces: Allman              # 花括号风格采用 Allman 风格（将花括号始终放在新的一行），提升可读性。
+
+BinPackArguments: 'false'              # 不对函数调用的参数进行压缩，避免将多个参数挤在一行上。
+
+BinPackParameters: 'false'             # 不对函数声明的参数进行压缩，保持参数分布在多行上。
+
+Cpp11BracedListStyle: 'false'          # 关闭 C++11 风格的初始化列表格式（保持传统风格，不使用大括号初始化列表）。
+
+ColumnLimit: 125                       # 每行代码的字符数限制为 125，超过此列数的代码将会自动换行。
+
+NamespaceIndentation: All              # 所有命名空间内容将缩进，以提高代码层次的清晰度。
+
+SpaceAfterTemplateKeyword: 'false'     # 在 `template` 关键字后不添加空格。
+
+SpaceBeforeCtorInitializerColon: 'true' # 构造函数初始化列表冒号前加空格，提升可读性。
+
+SpaceBeforeInheritanceColon: 'true'    # 在继承类定义的冒号前加空格，提升代码可读性。
+
+SpaceBeforeParens: ControlStatements   # 在控制语句（如 if, while, for）中添加空格，例如 `if (x == y)`。
+
+SpaceBeforeRangeBasedForLoopColon: 'true'  # 在基于范围的 for 循环中的冒号前加空格，如 `for (auto x : y)`。
+
+SpaceInEmptyBlock: true                # 在空的代码块内添加空格，例如 `{ }`，以便增强代码一致性。
+
+Standard: 'Latest'                     # 使用最新的 C++ 标准，保证代码兼容性和现代化。

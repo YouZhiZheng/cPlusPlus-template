@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [ // 任务数组
+        {
+            "label": "Print workspaceFolder",
+            "type": "shell",
+            "command": "echo ${workspaceFolder}"
+        },
+        {
+            "label": "refactoring",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build",
+                "--config",
+                "Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.+):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ],
+            "detail": "使用 CMake 构建系统重新编译 Debug 模式的项目"
+        }
+    ]
+}
